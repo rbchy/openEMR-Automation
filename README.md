@@ -21,6 +21,7 @@ IDE: Eclipse / IntelliJ
 
 
 📁 Project Structure
+
 project-root/
 │
 ├── src/test/java/
@@ -62,41 +63,68 @@ Handling dynamic fields and dropdowns
 🎯 UI Validation
 
 Element visibility, text assertions, and layout checks
+
 ⚙️ Framework Highlights
+
 ✔️ BDD implementation with Cucumber (Gherkin syntax)
+
 ✔️ Page Object Model (POM) for clean and maintainable code
+
 ✔️ Reusable step definitions and hooks
+
 ✔️ Parameterized locators for dynamic UI elements
+
 ✔️ TestNG integration for flexible execution
+
 ✔️ Maven for dependency and build management
 
 ▶️ Running the Tests
+
 Using Maven
+
 mvn clean test
+
 Using TestNG Suite
+
 mvn test -DsuiteXmlFile=testng.xml
+
 Using IDE (Eclipse / IntelliJ)
+
 Right-click on the TestNG runner class
+
 Select Run As → TestNG Test
 
 📌 Prerequisites
 Ensure the following are installed:
 
 Java (JDK 8 or higher)
+
 Maven
+
 Eclipse / IntelliJ IDE
+
 Browser drivers (e.g., ChromeDriver)
+
 🔐 Special Considerations
+
 OpenEMR is a healthcare application, so test scenarios are designed to simulate realistic and sensitive workflows.
 Focus on data validation, secure login handling, and UI reliability.
 Avoid using real patient data—use only demo/test data provided by the application.
+
 📈 Future Enhancements
+
 Add reporting (Extent Reports / Allure Reports)
+
 Integrate CI/CD (Jenkins / GitHub Actions)
+
 Enable parallel test execution
+
 Add cross-browser testing
+
 Implement data-driven testing (Excel/JSON)
+
 API testing integration (REST Assured)
+
 Database validation (SQL)
 
 🤝 Contribution
