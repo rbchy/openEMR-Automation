@@ -8,11 +8,17 @@ OpenEMR_Automation is designed to automate critical workflows of an electronic m
 
 🛠️ Tech Stack
 Language: Java
+
 Automation Tool: Selenium WebDriver
+
 BDD Framework: Cucumber (Gherkin)
+
 Test Runner: TestNG
+
 Build Tool: Maven
+
 IDE: Eclipse / IntelliJ
+
 
 📁 Project Structure
 project-root/
