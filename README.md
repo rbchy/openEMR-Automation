@@ -1,137 +1,141 @@
-OpenEMR_Automation – BDD Cucumber Test Automation Framework
-A robust and scalable UI automation framework built for the OpenEMR demo application. This project demonstrates advanced QA automation practices using Behavior-Driven Development (BDD), focusing on healthcare workflows, secure authentication, and reliable UI validation.
+# OpenEMR Automation – BDD Cucumber Test Framework
 
-🚀 Overview
-OpenEMR_Automation is designed to automate critical workflows of an electronic medical record (EMR) system. It simulates real-world healthcare scenarios such as user login, patient management, and navigation across medical modules.
+A comprehensive UI automation framework for testing the OpenEMR electronic medical record (EMR) system using Behavior-Driven Development (BDD) principles. This project demonstrates industry-best practices in test automation architecture and healthcare application quality assurance.
 
-🔗 Application Under Test: http://demo.openemr.io/b/openemr/interface/login/login.php
+**Live Application:** [demo.openemr.io](http://demo.openemr.io/b/openemr/interface/login/login.php)
 
-🛠️ Tech Stack
-Language: Java
+## 🛠️ Technology Stack
 
-Automation Tool: Selenium WebDriver
+| Component | Technology |
+|-----------|-----------|
+| **Language** | Java |
+| **Automation Tool** | Selenium WebDriver |
+| **BDD Framework** | Cucumber (Gherkin) |
+| **Test Runner** | TestNG |
+| **Build Tool** | Maven |
+| **IDE** | Eclipse / IntelliJ IDEA |
 
-BDD Framework: Cucumber (Gherkin)
+## 📁 Project Structure
 
-Test Runner: TestNG
-
-Build Tool: Maven
-
-IDE: Eclipse / IntelliJ
-
-
-📁 Project Structure
-
-project-root/
+```
+openEMR-Automation/
 │
 ├── src/test/java/
-│   ├── features/        # Gherkin feature files
-│   ├── steps/           # Step definition classes
-│   ├── hooks/           # Setup & teardown (Before/After hooks)
-│   └── runner/          # Test runner classes
+│   ├── features/         # BDD feature files (Gherkin syntax)
+│   ├── steps/            # Step definition implementations
+│   ├── hooks/            # Setup & teardown logic (Before/After)
+│   └── runner/           # TestNG test runner classes
 │
 ├── src/main/java/
-│   └── pages/           # Page Object Model (POM) classes
+│   └── pages/            # Page Object Model (POM) classes
 │
-├── testng.xml           # TestNG suite configuration
-├── pom.xml              # Maven dependencies and plugins
-└── README.md            # Project documentation
+├── pom.xml               # Maven dependencies & plugins
+├── testng.xml            # TestNG suite configuration
+└── README.md             # This file
+```
 
-🎯 Test Coverage
-This framework covers essential healthcare application workflows:
+## 🎯 Test Coverage
 
-🔐 Authentication
+### 🔐 Authentication
+- Valid/invalid login scenarios
+- Session management and logout validation
+- Error message verification
 
-Valid and invalid login scenarios
-Session handling and logout validation
+### 👤 Patient Management
+- Create and add new patient records
+- Search and retrieve patient information
+- Update patient details
 
-👤 Patient Management
+### 🗂️ Navigation & Dashboard
+- Access application modules (Patients, Calendar, Messages, etc.)
+- Verify page transitions and navigation workflows
+- Module-specific functionality testing
 
-Add new patient
-Search and view patient records
+### 🧾 Form & Data Handling
+- Input validation and error handling
+- Dynamic field interaction
+- Dropdown and select element management
 
-🗂️ Dashboard & Navigation
+### ✅ UI Validation
+- Element visibility and state verification
+- Text assertions and content validation
+- Layout and responsiveness checks
 
-Accessing different modules (Patients, Calendar, Messages)
-Verifying page transitions
+## ✨ Framework Features
 
-🧾 Form Handling
+- ✅ **BDD Implementation** – Cucumber with Gherkin syntax for readable test scenarios
+- ✅ **Page Object Model (POM)** – Maintainable and scalable code structure
+- ✅ **Reusable Components** – Step definitions and hooks for code reusability
+- ✅ **Dynamic Locators** – Parameterized element locators for flexible UI interaction
+- ✅ **TestNG Integration** – Flexible test execution and reporting
+- ✅ **Maven Build Management** – Automated dependency management and builds
 
-Input validation for patient forms
-Handling dynamic fields and dropdowns
+## 📋 Prerequisites
 
-🎯 UI Validation
+Before running the tests, ensure the following are installed:
 
-Element visibility, text assertions, and layout checks
+- **Java Development Kit (JDK)** – Version 8 or higher
+- **Maven** – Latest stable version
+- **IDE** – Eclipse or IntelliJ IDEA
+- **Browser Driver** – ChromeDriver (or appropriate driver for your browser)
 
-⚙️ Framework Highlights
+## ▶️ Running the Tests
 
-✔️ BDD implementation with Cucumber (Gherkin syntax)
-
-✔️ Page Object Model (POM) for clean and maintainable code
-
-✔️ Reusable step definitions and hooks
-
-✔️ Parameterized locators for dynamic UI elements
-
-✔️ TestNG integration for flexible execution
-
-✔️ Maven for dependency and build management
-
-▶️ Running the Tests
-
-Using Maven
-
+### Option 1: Maven Command Line
+```bash
+# Run all tests
 mvn clean test
 
-Using TestNG Suite
-
+# Run tests with specific TestNG suite
 mvn test -DsuiteXmlFile=testng.xml
+```
 
-Using IDE (Eclipse / IntelliJ)
+### Option 2: IDE (Eclipse / IntelliJ)
+1. Right-click on the test runner class
+2. Select **Run As** → **TestNG Test**
 
-Right-click on the TestNG runner class
+### Option 3: Direct TestNG Execution
+```bash
+java -cp <classpath> org.testng.TestNG testng.xml
+```
 
-Select Run As → TestNG Test
+## 🔐 Important Notes
 
-📌 Prerequisites
-Ensure the following are installed:
+⚠️ **Healthcare Data Sensitivity**
+- Test scenarios simulate realistic healthcare workflows
+- Always use demo/test data provided by OpenEMR
+- Never use real patient information in testing
+- Focus on data validation, secure authentication, and UI reliability
 
-Java (JDK 8 or higher)
+## 📈 Roadmap & Future Enhancements
 
-Maven
+- [ ] Advanced Reporting (Extent Reports / Allure Reports)
+- [ ] CI/CD Integration (Jenkins / GitHub Actions)
+- [ ] Parallel Test Execution
+- [ ] Cross-Browser Testing Support
+- [ ] Data-Driven Testing (Excel/JSON/Database)
+- [ ] REST API Testing (REST Assured)
+- [ ] Database Validation Queries
+- [ ] Performance Testing Integration
 
-Eclipse / IntelliJ IDE
+## 🤝 Contributing
 
-Browser drivers (e.g., ChromeDriver)
+Contributions are welcome! Please feel free to:
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Submit a pull request
 
-🔐 Special Considerations
+## 👨‍💻 Author
 
-OpenEMR is a healthcare application, so test scenarios are designed to simulate realistic and sensitive workflows.
-Focus on data validation, secure login handling, and UI reliability.
-Avoid using real patient data—use only demo/test data provided by the application.
+**Ranajit B. Chowdhury**  
+Software QA Engineer | Automation Testing Specialist  
+Expertise: Test Automation, BDD, Selenium, Healthcare Applications
 
-📈 Future Enhancements
+## 📄 License
 
-Add reporting (Extent Reports / Allure Reports)
+This project is provided as-is for educational and professional QA automation purposes.
 
-Integrate CI/CD (Jenkins / GitHub Actions)
+---
 
-Enable parallel test execution
-
-Add cross-browser testing
-
-Implement data-driven testing (Excel/JSON)
-
-API testing integration (REST Assured)
-
-Database validation (SQL)
-
-🤝 Contribution
-Contributions are welcome! Feel free to fork the repository and submit pull requests.
-
-👨‍💻 Author
-Ranajit B. Chowdhury Software QA Engineer | Automation & Manual Testing
-
-📄 Summary
-This project demonstrates a real-world automation framework for a healthcare EMR system, highlighting strong QA engineering skills, scalable framework design, and industry best practices in UI automation and BDD—ideal for SDET and QA automation portfolios.
+**Last Updated:** April 2026
