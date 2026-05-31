@@ -129,7 +129,7 @@ Contributions are welcome! Please feel free to:
 ## 👨‍💻 Author
 
 **Ranajit B. Chowdhury**  
-Software QA Engineer | Automation Testing Specialist  
+Software Programmer &  QA Automation Engineer | Automation Testing Specialist  
 Expertise: Test Automation, BDD, Selenium, Healthcare Applications
 
 ## 📄 License
